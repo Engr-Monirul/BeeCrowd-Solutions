@@ -1,0 +1,30 @@
+#include <iostream>
+#include <math.h>
+#include <stdlib.h>
+using namespace std;
+int main()
+{
+    long long pa,pb;
+    float g1,g2;
+    int i,k,t;
+    cin>>t;
+    for(i=0; i<t; i++)
+    {
+        k=0;
+        cin>>pa>>pb>>g1>>g2;
+        while(pa<=pb)
+        {
+            pa+=(pa*g1)/100;
+            pb+=(pb*g2)/100;
+            k=k+1;
+        }
+        if(k<=100)
+        {
+            cout<<k<<" anos."<<endl;
+        }
+        else 
+        {
+            cout<<"Mais de 1 seculo."<<endl;
+        }
+    }
+}
